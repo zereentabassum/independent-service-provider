@@ -19,8 +19,12 @@ const Signup = () => {
         <Form.Label className='text-start' >Password:</Form.Label>
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>
+    <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label className='text-start' >Confirm Password:</Form.Label>
+        <Form.Control type="password" placeholder="Confirm Password" />
+    </Form.Group>
    
-    <Button className='px-5' variant="primary" type="submit">
+    <Button className='px-5 mt-2' variant="primary" type="submit">
         Sign up
     </Button>
     </Form>
