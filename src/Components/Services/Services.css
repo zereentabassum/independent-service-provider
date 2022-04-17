@@ -1,4 +1,11 @@
 .service-heading{
     font-size: 50px;
-    color: rgb(255, 96, 78);
+   
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
 }

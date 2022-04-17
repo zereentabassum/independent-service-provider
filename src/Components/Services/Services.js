@@ -4,6 +4,7 @@ import article from '../../images/article.webp';
 import product from '../../images/product2.png';
 import blog from '../../images/blog.webp';
 import press from '../../images/press.webp';
+import Service from '../Service/Service';
 
 const Services = () => {
     const services = [
@@ -38,8 +39,14 @@ const Services = () => {
       ]
   
     return (
-        <div className='m-5 py-5'>
-            <h1 className='service-heading'>Services</h1>
+        <div className='m-5 py-5 container'>
+            <h1 className='service-heading  text-primary py-3'>Services</h1>
+            <div className='services ms-5'>
+            {
+             services.map(service=> <Service key={service.id} service={service}></Service>)
+            }
+            </div>
+          
         </div>
     );
 };
