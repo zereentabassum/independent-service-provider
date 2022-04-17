@@ -1,0 +1,13 @@
+.heading{
+    padding-top: 30px;
+    padding-bottom: 420px;
+    color: white;
+    font-size: 100px;
+
+}
+
+.heading-div{
+    background-image: url('../../images/b4.jpg');
+    background-repeat: no-repeat;
+    
+}
