@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 import './Login.css';
 
 const Login = () => {
@@ -20,6 +21,13 @@ const Login = () => {
     <Button className='px-5 mt-2' variant="primary" type="submit">
         Login
     </Button>
+    <div className='d-flex align-items-center'>
+        <div style={{height:'1px'}} className='bg-primary w-50'></div>
+        <h5 className='mt-2 px-2'>Or</h5>
+        <div style={{height:'1px'}} className='bg-primary w-50'></div>
+    </div>
+  
+    <GoogleLogin></GoogleLogin>
     </Form>
         </div>
     );
