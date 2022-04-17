@@ -8,4 +8,18 @@ h1{
     background-image: url('https://wallpapercave.com/wp/wTwFjvw.jpg');
     background-attachment: fixed;
     margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 85%;
+}
+.extra-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.extra-section div{
+    width: 180px;
+    border: 2px solid white;
+    padding: 5px;
+   
 }
