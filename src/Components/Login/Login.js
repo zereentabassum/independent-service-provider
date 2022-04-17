@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
 import './Login.css';
 
 const Login = () => {
     return (
-        <div className='form p-5'>
+        <div className='form p-3'>
             <h1>Log in</h1>
             <Form className='w-25 mx-auto login-section'>
     <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
@@ -18,9 +19,10 @@ const Login = () => {
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>
    
-    <Button className='px-5 mt-2' variant="primary" type="submit">
+    <Button className='px-5 mt-2 mb-2' variant="primary" type="submit">
         Login
     </Button>
+    <p>Don't have an account? <Link className='text-decoration-none' to='/signup'>Sign up</Link></p>
     <div className='d-flex align-items-center'>
         <div style={{height:'1px'}} className='bg-primary w-50'></div>
         <h5 className='mt-2 px-2'>Or</h5>
@@ -28,6 +30,7 @@ const Login = () => {
     </div>
   
     <GoogleLogin></GoogleLogin>
+    
     </Form>
         </div>
     );

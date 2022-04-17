@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Signup.css';
 
 const Signup = () => {
     return (
-        <div className='form p-5'>
+        <div className='form p-3'>
             <h1>Sign Up</h1>
             <Form className='w-25 mx-auto form-section'>
     <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
@@ -24,9 +25,11 @@ const Signup = () => {
         <Form.Control type="password" placeholder="Confirm Password" />
     </Form.Group>
    
-    <Button className='px-5 mt-2' variant="primary" type="submit">
+    <Button className='px-5 mt-2 mb-4' variant="primary" type="submit">
         Sign up
     </Button>
+    <p>Already have an account? <Link className='text-decoration-none' to='/login'>Login</Link></p>
+
     </Form>
         </div>
     );
