@@ -7,5 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    
+}
+.service-div{
+    background-color: rgb(255, 247, 238);
 }

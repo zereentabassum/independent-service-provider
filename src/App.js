@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
    
@@ -21,6 +22,7 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
