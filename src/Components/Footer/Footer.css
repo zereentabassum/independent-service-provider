@@ -1,0 +1,11 @@
+footer{
+    background-color: rgb(1, 1, 53);
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0 ;
+}
+.info{
+    margin-top: 20px;
+}

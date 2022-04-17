@@ -9,5 +9,6 @@
 .heading-div{
     background-image: url('../../images/b4.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
