@@ -7,12 +7,12 @@ const Login = () => {
         <div className='form p-5'>
             <h1>Log in</h1>
             <Form className='w-25 mx-auto login-section'>
-    <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
         <Form.Label>Email address:</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
     </Form.Group>
 
-    <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Group className="mb-3 text-start" controlId="formBasicPassword">
         <Form.Label className='text-start' >Password:</Form.Label>
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>

@@ -5,11 +5,11 @@ const Footer = () => {
     return (
         <div>
             <footer> 
-                <div className='footer mt-5 text-light'>
+                <div className='footer mt-5 text-light container text-start'>
                <div className='info'>
               <p>Address: Jl. Sunset Road No.815 </p> 
               <p>Email:expert23@gmail.com</p> </div> 
-              <div>
+              <div className='details'>
                   <p>Privacy Policy</p>
                   <p>Terms and Conditions</p>
                   <p>Disclaimer</p>
