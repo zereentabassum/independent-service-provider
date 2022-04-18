@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = ( {service} ) => {
@@ -13,8 +14,9 @@ const Service = ( {service} ) => {
                 <h2>{service.name}</h2>
                 <h4>Price: ${service.price}</h4>
                 <p>{service.description}</p>
-                <Button variant="primary">Checkout</Button>{' '}
-
+                <Link to={'/checkout'}>
+                <Button  variant="primary">Checkout</Button>{' '}
+                </Link>
             </div>
         </div>
     );

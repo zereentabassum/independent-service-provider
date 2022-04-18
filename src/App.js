@@ -8,6 +8,8 @@ import Signup from './Components/Signup/Signup';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
 import NotFound from './Components/NotFound/NotFound';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
    
@@ -21,6 +23,10 @@ function App() {
         <Route path='/login' element={<Login></Login> }></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/checkout' element={<RequireAuth>
+          <Checkout></Checkout>
+        </RequireAuth>}></Route>
+  
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

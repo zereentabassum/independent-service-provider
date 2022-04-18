@@ -1,41 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
 import './Login.css';
 
 const Login = () => {
 
-    const emailRef = useState('');
-    const  passwordRef = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
     const [
       signInWithEmailAndPassword,
       user,
       loading,
       error,
     ] = useSignInWithEmailAndPassword(auth);
-  
-    // const handleLogin = event =>{
-        
+
+    const loginEmailBlur = event =>{
+        setEmail(event.target.value);
     }
+    const loginPasswordBlur = event =>{
+        setPassword(event.target.value);
+    }
+  
+    const handleLogin = event =>{
+        event.preventDefault();
+        signInWithEmailAndPassword(email, password);
+    }
+    if(user){
+        navigate('/blogs');
+    }
+    let loadLogin;
+    if (loading) {
+        loadLogin = <p>Loading...</p>;
+      }
+      let loginError;
+    // if (error) {
+    //     loginError = (
+    //       <div>
+    //         <p style={{color:'red'}}>Error: {error.message}</p>
+    //       </div>
+    //     );
+    //   }
+
 
     return (
         <div className='form p-3'>
             <h1>Log in</h1>
-            <Form className='w-25 mx-auto login-section'>
-    <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+            <Form onClick={handleLogin} className='w-25 mx-auto login-section'>
+    <Form.Group onBlur={loginEmailBlur} className="mb-3 text-start" controlId="formBasicEmail">
         <Form.Label>Email address:</Form.Label>
         <Form.Control type="email" placeholder="Enter email" required/>
     </Form.Group>
 
-    <Form.Group className="mb-3 text-start" controlId="formBasicPassword">
+    <Form.Group onBlur={loginPasswordBlur} className="mb-4 text-start" controlId="formBasicPassword">
         <Form.Label className='text-start' >Password:</Form.Label>
         <Form.Control type="password" placeholder="Password" required/>
     </Form.Group>
-   
-    <Button className='px-5 mt-2 mb-2' variant="primary" type="submit">
+    {loadLogin}    
+    {loginError}
+    <Button  className='px-5 mt-2 mb-2' variant="primary" type="submit">
         Login
     </Button>
     <p>Don't have an account? <Link className='text-decoration-none' to='/signup'>Sign up</Link></p>
