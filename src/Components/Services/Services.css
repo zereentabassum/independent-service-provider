@@ -10,3 +10,13 @@
 .service-div{
     background-color: rgb(234, 255, 232);
 }
+
+
+   /* Responsive styles */
+@media only screen and (max-width: 698px) {
+    .services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}

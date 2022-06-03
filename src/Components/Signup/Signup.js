@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 import {useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -33,15 +34,16 @@ const Signup = () => {
 
        await createUserWithEmailAndPassword(email, password);
        await updateProfile({ displayName: name });
-       console.log('Updated profile');
-       navigate('/home');
+      //  console.log('Updated profile');
+    //    navigate('/home');
     }
     if(user){
        console.log(user);
+       alert('Please check your email for verification')
     }
     let load;
-    if (loading) {
-        load = <p>Loading...</p>;
+    if (loading || updating) {
+        load = <p>Loading...</p> ;
       }
       let errorMessage;
     if (error) {

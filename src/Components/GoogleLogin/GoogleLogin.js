@@ -22,14 +22,14 @@ const GoogleLogin = () => {
       }
 
       if(user){
-        navigate('/home');
+        navigate('/checkout');
       }
       
     return (
         <div>
             {errorMessage}
             {load}
-            <Button onClick={()=> signInWithGoogle()} className='btn btn-primary px-5 mt-2'>Sign in With Google</Button>
+            <Button onClick={()=> signInWithGoogle()} className='btn btn-primary px-5 mt-2 mb-4'>Sign in With Google</Button>
         </div>
     );
 };

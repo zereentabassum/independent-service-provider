@@ -10,12 +10,12 @@ const Service = ( {service} ) => {
             <div className='image'>
                 <img src={service.img} alt="" />
             </div>
-            <div className='p-3'>
+            <div className='p-2'>
                 <h2>{service.name}</h2>
                 <h4>Price: ${service.price}</h4>
                 <p>{service.description}</p>
                 <Link to={'/checkout'}>
-                <Button  variant="primary">Checkout</Button>{' '}
+                <Button className='px-4'  variant="primary">Checkout</Button>{' '}
                 </Link>
             </div>
         </div>
