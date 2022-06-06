@@ -2,11 +2,10 @@
 
 ## Live Website Link: [https://expert-writing-service.web.app/](https://expert-writing-service.web.app/)
 
-* I made a writers website.
-* I several pages with route.
-* I made home, about , blog, email and sign up page.
-* I used firebase authentication.
-* Then I hosted it on firebase.
+* This is a website for an individual service provider who provides writing services.
+* It is designed with Bootstrap and React Bootstrap.
+* The user interface is developed with React.
+* Firebase authentication was used in it for login and signup.
 
 
 ### The library/frameworks/tools I have used :
